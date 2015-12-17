@@ -1,11 +1,11 @@
 {
-  "name": "socketcluster-sample",
-  "description": "A sample SocketCluster app",
+  "name": "channels-chat",
+  "description": "Channels-chat is a real-time pub-sub auth system using Socketcluster",
   "version": "1.0.0",
   "contributors": [
     {
-      "name": "Jonathan Gros-Dubois",
-      "email": "grosjona@yahoo.com.au"
+      "name": "Francisco Espejo",
+      "email": "franjoespejo@gmail.com"
     }
   ],
   "dependencies": {
