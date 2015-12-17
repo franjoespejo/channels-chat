@@ -30,13 +30,11 @@ I assume:
 
 
 Setup the socketcluster command:
-
 ```bash
 npm install -g socketcluster
 ```
 
 Then, Create Databases:
-
 ```sql
 
 CREATE DATABASE IF NOT EXISTS `guud_db`;
@@ -51,16 +49,6 @@ ENGINE = INNODB;
 
 CREATE DATABASE IF NOT EXISTS `SCPresence`;
 USE SCPresence;
-
-DROP USER 'SCP_user'@'localhost';
-FLUSH PRIVILEGES;
-CREATE USER 'SCP_user'@'localhost' IDENTIFIED BY 'putyourpasswordhere';
-GRANT SELECT ON `SCPresence`.* TO 'SCP_user'@'localhost'; 
-GRANT INSERT ON `SCPresence`.* TO 'SCP_user'@'localhost'; 
-GRANT UPDATE ON `SCPresence`.* TO 'SCP_user'@'localhost'; 
-GRANT DELETE ON `SCPresence`.* TO 'SCP_user'@'localhost'; 
-GRANT EXECUTE ON `SCPresence`.* TO 'SCP_user'@'localhost'; 
-
 
 CREATE TABLE IF NOT EXISTS `SCPresence_users` (
   SCP_id INT(11) NOT NULL AUTO_INCREMENT,
@@ -78,12 +66,11 @@ ENGINE = INNODB;
 ```
 
 Now, just get the code
-
 ```bash
 git clone git@github.com:franjoespejo/channels-chat.git
 ```
-Finally install all the dependences
 
+Finally install all the dependences
 ```bash
 cd channels-chat
 npm install
