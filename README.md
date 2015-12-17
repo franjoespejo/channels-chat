@@ -6,6 +6,7 @@ Channels-chat
 
 Channels-chat is a is a fast, highly scalable HTTP + realtime solution which is ready to work with multi-process
 realtime servers that make use of all CPU cores on a machine/instance. It has been developed suing async and not-blocking  standars.
+
 Thanks to Socketcluster, it removes the limitations of having to run your Node.js server as a single thread and makes your backend resilient by automatically recovering from worker crashes and aggregating errors into a central log.
 It is ready to be vertical-horizontally scalable, it uses redis platform for communication between machines/instances, so with no more configuration than setting a IP:PORT we can scale the system with other machines.
 
