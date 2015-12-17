@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Guud.tv Socketscenter</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.5 -->
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+         folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="../dist/css/skins/_all-skins.min.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body style="background-color:#ecf0f5;"class="hold-transition skin-blue sidebar-mini">
+    <div class="wrapper">
+
+      <header class="main-header">
+        <!-- Logo -->
+        <a href="index.html" class="logo">
+          <!-- mini logo for sidebar mini 50x50 pixels -->
+          <span class="logo-mini"><b>Guud.</b>TV</span>
+          <!-- logo for regular state and mobile devices -->
+          <span class="logo-lg"><b>Guud.</b>TV</span>
+        </a>
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav class="navbar navbar-static-top" role="navigation">
+          <!-- Sidebar toggle button-->
+         
+          <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+              <!-- Messages: style can be found in dropdown.less-->
+            
+           
+              <!-- User Account: style can be found in dropdown.less -->
+              <li class="dropdown user user-menu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <img src="../dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+                  <span class="name"class="hidden-xs">Alexander Pierce</span>
+                </a>
+                <ul class="dropdown-menu">
+                  <!-- User image -->
+                  <li class="user-header">
+                    <img src="../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                    <p>
+                      <span class="name"> </span>
+                    
+                    </p>
+                  </li>
+                  <!-- Menu Body -->
+               
+                  <!-- Menu Footer-->
+                  <li class="user-footer">
+                   
+                    <div class="pull-right">
+                      <a href="#" onclick="logout();" class="btn btn-default btn-flat">Sign out</a>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <!-- Control Sidebar Toggle Button -->
+             
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <!-- Left side column. contains the logo and sidebar -->
+      <aside class="main-sidebar">
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+          <!-- Sidebar user panel -->
+          <div class="user-panel">
+            <div class="pull-left image">
+              <img src="../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+            </div>
+            <div class="pull-left info">
+              <p> <span class="name"> </span></p>
+              <a id="on" href="#"><i class="fa fa-circle text-success"></i> Online</a>
+              <a id="off" href="#"><i class="fa fa-circle text-red"></i> Offline</a>
+            </div>
+          </div>
+          <!-- search form -->
+        <button onclick='$("#login").toggle();' id="btnlogin"class="btn btn-block btn-primary">Login</button>
+          <!-- /.search form -->
+          <!-- sidebar menu: : style can be found in sidebar.less -->
+        
+        </section>
+        <!-- /.sidebar -->
+      </aside>
+
+      <!-- Content Wrapper. Contains page content -->
+      <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+          <h1>
+            Canales
+            <small></small>
+          </h1>
+         
+        </section>
+
+        <!-- Main content -->
+        <section class="content">
+ 
+          <!-- =========================================================== -->
+
+          <!-- Direct Chat -->
+          <div class="row">
+            <div class="col-md-3">
+              <!-- DIRECT CHAT PRIMARY -->
+              <div class="box box-primary direct-chat direct-chat-primary">
+                <div class="box-header with-border">
+                  <h3 class="box-title">Canal 1</h3>
+                  <div class="box-tools pull-right">
+                    <span id="sub1" title="3 New Messages" class="badge bg-green">Subscribed</span>
+                     <span id="unsub1" title="3 New Messages" class="badge bg-red">Unubscribed</span>
+                     <button class="btn btn-box-tool" onclick="con1();"><i class="fa fa-retweet"></i></button>
+                   
+                  </div>
+                </div><!-- /.box-header -->
+                <div class="box-body">
+                  <!-- Conversations are loaded here -->
+                  <div id="div-mensajes-1" class="direct-chat-messages">
+                    <!-- Message. Default to the left -->
+                   
+                  </div><!--/.direct-chat-messages-->
+
+                  <!-- Contacts are loaded here -->
+                  <div class="direct-chat-contacts">
+                    <ul class="contacts-list">
+                      <li>
+                        <a href="#">
+                          <img class="contacts-list-img" src="../dist/img/user1-128x128.jpg">
+                          <div class="contacts-list-info">
+                            <span class="contacts-list-name">
+                              Count Dracula
+                              <small class="contacts-list-date pull-right">2/28/2015</small>
+                            </span>
+                            <span class="contacts-list-msg">How have you been? I was...</span>
+                          </div><!-- /.contacts-list-info -->
+                        </a>
+                      </li><!-- End Contact Item -->
+                    </ul><!-- /.contatcts-list -->
+                  </div><!-- /.direct-chat-pane -->
+                </div><!-- /.box-body -->
+                <div class="box-footer">
+                  <form onsubmit="envia1();return false;" id="canal1" >
+                    <div class="input-group">
+                      <input type="text" id="texto1" name="message1" placeholder="Type Message ..." class="form-control">
+                      <span class="input-group-btn">
+                        <button type="button" id="b1" onclick="envia1();" class="btn btn-primary btn-flat">Send</button>
+                      </span>
+                    </div>
+                  </form>
+                </div><!-- /.box-footer-->
+              </div><!--/.direct-chat -->
+            </div><!-- /.col -->
+   <div class="col-md-3">
+              <!-- DIRECT CHAT PRIMARY -->
+              <div class="box box-primary direct-chat direct-chat-primary">
+                <div class="box-header with-border">
+                  <h3 class="box-title">Canal 2</h3>
+                  <div class="box-tools pull-right">
+                    <span id="sub2" class="badge bg-green">Subscribed</span>
+                     <span id="unsub2"  class="badge bg-red">Unubscribed</span>
+                     <button class="btn btn-box-tool" onclick="con2();"><i class="fa fa-retweet"></i></button>
+                   
+                  </div>
+                </div><!-- /.box-header -->
+                <div class="box-body">
+                  <!-- Conversations are loaded here -->
+                  <div id="div-mensajes-2" class="direct-chat-messages">
+                    <!-- Message. Default to the left -->
+                  
+                    <!-- Message to the right -->
+                   
+                  </div><!--/.direct-chat-messages-->
+
+                  <!-- Contacts are loaded here -->
+                  <div class="direct-chat-contacts">
+                    <ul class="contacts-list">
+                      <li>
+                        <a href="#">
+                          <img class="contacts-list-img" src="../dist/img/user1-128x128.jpg">
+                          <div class="contacts-list-info">
+                            <span class="contacts-list-name">
+                              Count Dracula
+                              <small class="contacts-list-date pull-right">2/28/2015</small>
+                            </span>
+                            <span class="contacts-list-msg">How have you been? I was...</span>
+                          </div><!-- /.contacts-list-info -->
+                        </a>
+                      </li><!-- End Contact Item -->
+                    </ul><!-- /.contatcts-list -->
+                  </div><!-- /.direct-chat-pane -->
+                </div><!-- /.box-body -->
+                <div class="box-footer">
+                  <form onsubmit="envia2();return false;" id="canal1" >
+                    <div class="input-group">
+                      <input type="text" id="texto2" name="message2" placeholder="Type Message ..." class="form-control">
+                      <span class="input-group-btn">
+                        <button type="button" id="b1" onclick="envia2();" class="btn btn-primary btn-flat">Send</button>
+                      </span>
+                    </div>
+                  </form>
+                </div><!-- /.box-footer-->
+              </div><!--/.direct-chat -->
+            </div><!-- /.col -->
+
+       
+          </div><!-- /.row -->
+
+       <div class="row">
+       <div id="login" class="login-box-body col-md-5 col-md-offset-3">
+        <p class="login-box-msg">Sign in to start your session</p>
+        <form onsubmit="logea();return false;">
+          <div class="form-group has-feedback">
+            <input id="logemail"type="email" class="form-control" placeholder="Email">
+            <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+          </div>
+          <div class="form-group has-feedback">
+            <input id="logpass" type="password" class="form-control" placeholder="Password">
+            <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+          </div>
+          <div class="row">
+            <div class="col-xs-8">
+              <div class="checkbox icheck">
+                <label>
+                  <div class="icheckbox_square-blue" aria-checked="false" aria-disabled="false" style="position: relative;"><input type="checkbox" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div> Remember Me
+                </label>
+              </div>
+            </div><!-- /.col -->
+            <div class="col-xs-4">
+              <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
+            </div><!-- /.col -->
+          </div>
+        </form>
+
+        <div class="social-auth-links text-center">
+          <p>- OR -</p>
+          <a href="#" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-facebook"></i> Sign in using Facebook</a>
+          <a href="#" class="btn btn-block btn-social btn-google btn-flat"><i class="fa fa-google-plus"></i> Sign in using Google+</a>
+        </div><!-- /.social-auth-links -->
+
+        <a href="#">I forgot my password</a><br>
+        <a href="register.html" class="text-center">Register a new membership</a>
+
+      </div>
+       </div>
+
+        </section><!-- /.content -->
+      </div><!-- /.content-wrapper -->
+
+     
+
+      <!-- Control Sidebar -->
+     
+
+     <div class="control-sidebar-bg"></div>
+
+    </div><!-- ./wrapper -->
+
+    <!-- jQuery 2.1.4 -->
+    <script src="../plugins/jQuery/jQuery-2.1.4.min.js"></script>
+    <!-- Bootstrap 3.3.5 -->
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <!-- Slimscroll -->
+    <script src="../plugins/slimScroll/jquery.slimscroll.min.js"></script>
+    <!-- FastClick -->
+    <script src="../plugins/fastclick/fastclick.min.js"></script>
+   
+    <script type="text/javascript" src="/socketcluster.js"></script>  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>  
+
+    <script type="text/javascript">  
+
+    
+    $("#on").hide();
+    $("#login").hide();
+
+
+    var socket = socketCluster.connect({port: 8000});
+    
+    var t=setInterval(function(){
+        if(socket.getState()==='open'){
+          $("#on").show();
+          $("#off").hide();
+        }else{
+          $("#off").show();
+          $("#on").hide();
+        }
+      //  console.log(socket);
+      },1000);
+     
+
+
+    /**
+      SOCKETCLUSTER CODE
+    **/
+
+    var email="Invitado";
+    socketid=null;
+
+    socket.on('error', function (err) {
+      throw 'Socket error - ' + err;
+    });
+
+    socket.on('connect', function (data) {
+      console.log(data);
+      socketid=data.id;
+      if(data.isAuthenticated){
+        console.log('You are correctly authenticated ;) ');
+        $(".name").replaceWith('<span class="name">Auth</span>');
+        $("#btnlogin").hide();
+        $("#login").hide();
+      }else{
+        console.log('You are NOT authenticated');
+        $(".name").replaceWith('<span class="name">Invitado</span>');
+        $("#btnlogin").show();       
+      }
+    });
+
+    function envia1(){
+      var aux= { 'data' : $('#texto1').val(), 'socketid' : socketid, 'email': email};
+      if($('#texto1').val() != '') {
+       socket.publish('canal1',aux);
+       $('#div-mensajes-1').append('<div class="direct-chat-msg"> \
+                   <div class="direct-chat-info clearfix"> \
+                  <span class="direct-chat-name pull">'+email+'</span> \
+                  </div><!-- /.direct-chat-info --> \
+                  <img class="direct-chat-img" src="../dist/img/user1-128x128.jpg" alt="message user image"><!-- /. \direct-chat-img --> \
+                  <div class="direct-chat-text">'+ $('#texto1').val() +
+                    '</div><!-- /.direct-chat-text --> \
+                </div> ');
+      } 
+      $('#texto1').val('')
+      return false;
+    }
+
+    function envia2(){
+
+      var aux= { 'data' : $('#texto2').val(), 'socketid' : socketid, 'email':email};
+      if($('#texto2').val() != '') {
+   // socket.publish('canal1', $('#texto1').val());
+   socket.publish('canal2',aux);
+
+
+   $('#div-mensajes-2').append('<div class="direct-chat-msg"> \
+     <div class="direct-chat-info clearfix"> \
+      <span class="direct-chat-name pull">'+email+'</span> \
+    </div><!-- /.direct-chat-info --> \
+    <img class="direct-chat-img" src="../dist/img/user1-128x128.jpg" alt="message user image"><!-- /. \direct-chat-img --> \
+    <div class="direct-chat-text">'+ $('#texto2').val() +
+      '</div><!-- /.direct-chat-text --> \
+    </div> ');
+ } 
+
+ $('#texto2').val('')
+ return false;
+}
+
+
+
+      var can1 = false;
+      var can2=false;
+      var chatChannel=null;
+       $("#sub1").hide();
+        $("#sub2").hide();
+
+      function logea(){
+         email= $("#logemail").val();
+        var pass= $("#logpass").val();
+        socket.emit('login', {'email': email, 'pass': pass } ,function(err){
+          if(err){
+            console.log(err);
+          }else{
+          $(".name").replaceWith('<span class="name">'+email+'</span>');
+          $("#btnlogin").hide();
+          $("#login").hide();
+            // location.reload();
+          }
+
+        });
+
+
+      }
+      
+
+     function con1(){
+    
+      if(can1==false){
+         chatChannel = socket.subscribe('canal1');
+        can1=true;
+        $('#unsub1').hide();
+        $('#sub1').show();
+chatChannel.on('subscribeFail', function(err) {  
+        console.log('Failed to subscribe to Yell channel due to error: ' + err);
+      });
+
+      chatChannel.watch(function (data) { 
+      console.log(data); 
+        $('#div-mensajes-1').append('<div class="direct-chat-msg right"> \
+                       <div class="direct-chat-info clearfix"> \
+                      <span class="direct-chat-name pull-right">'+data.email+'</span> \
+                      </div><!-- /.direct-chat-info --> \
+                      <img class="direct-chat-img" src="../dist/img/user3-12\8x128.jpg" alt="message user image"><!-- /. \direct-chat-img --> \
+                      <div class="direct-chat-text">'+ data.data +
+                        '</div><!-- /.direct-chat-text --> \
+                    </div> ');
+      });
+
+      }else{
+        can1=false;
+      socket.unsubscribe('canal1');
+        $('#sub1').hide();
+        $('#unsub1').show();
+      }
+
+     }
+     function logout(){
+
+      name="Invitado";
+       //console.log('NO estas auth');
+      $(".name").replaceWith('Invitado');
+      //$(".name").replaceWith('Invitado');
+      $("#btnlogin").show();
+      socket.removeAuthToken();
+     }
+    
+     function con2(){
+    
+      if(can2==false){
+         chatChannel = socket.subscribe('canal2');
+        can2=true;
+        $('#unsub2').hide();
+        $('#sub2').show();
+chatChannel.on('subscribeFail', function(err) {  
+        console.log('Failed to subscribe to Yell channel due to error: ' + err);
+      });
+
+      chatChannel.watch(function (data) { 
+      console.log(data); 
+        $('#div-mensajes-2').append('<div class="direct-chat-msg right"> \
+                       <div class="direct-chat-info clearfix"> \
+                      <span class="direct-chat-name pull-right">'+data.email+'</span> \
+                      </div><!-- /.direct-chat-info --> \
+                      <img class="direct-chat-img" src="../dist/img/user3-12\8x128.jpg" alt="message user image"><!-- /. \direct-chat-img --> \
+                      <div class="direct-chat-text">'+ data.data +
+                        '</div><!-- /.direct-chat-text --> \
+                    </div> ');
+      });
+
+      }else{
+        can2=false;
+       
+      socket.unsubscribe('canal2');
+        $('#sub2').hide();
+        $('#unsub2').show();
+      }
+
+     }
+
+      
+    
+    </script>  
+  </body>
+</html>
