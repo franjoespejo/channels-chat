@@ -107,7 +107,7 @@ Bellow an example of config, that runs over HTTPS, and uses 3 workers pararelly.
 
 In order to run it over HTTPS, all you need to do is set the protocol to 'https' and
 provide your private key and certificate as a start option when you instantiate SocketCluster - Example:
-
+In server.js
 ```js
 var socketCluster = new SocketCluster({
   workers: 3,
