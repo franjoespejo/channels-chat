@@ -27,6 +27,7 @@ You must be in a linux machine with apt-get packet management system.
 I assume:
 - You have set-up your permisions for the system/folder you are working in
 - You have node and npm 
+- You have a mysql-server available 
 
 
 Setup the socketcluster command:
@@ -34,7 +35,7 @@ Setup the socketcluster command:
 npm install -g socketcluster
 ```
 
-Then, Create Databases:
+Then, Create Databases (please note than because your system/version the sysntax could change): 
 ```sql
 
 CREATE DATABASE IF NOT EXISTS `guud_db`;
@@ -55,7 +56,7 @@ CREATE TABLE IF NOT EXISTS `SCPresence_users` (
   SCP_socket_id VARCHAR(255) DEFAULT NULL,
   SCP_user_id INT(11) DEFAULT NULL,
   SCP_channel VARCHAR(255) DEFAULT NULL,
-  SCP_updated DATETIME DEFAULT CURRENT_TIMESTAMP,
+  SCP_updated TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   SCP_authToken VARCHAR(2048) DEFAULT NULL,  
   SCP_ip VARCHAR(255) DEFAULT NULL,
   SCP_origin VARCHAR(1024) DEFAULT NULL,
