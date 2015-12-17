@@ -101,7 +101,7 @@ It is a panel where you can see the information about the users presence.
 Since the project it is using socketcluster.io, it has all the benefit associated with this framework.
 To use it with different machines, we'll just need to run a redis-server and set our machines to redis's IP:PORT.
 
-We can also use the loadbalancer that socketcluster has, or any other solution as nginx 
+We can also use the loadbalancer that socketcluster has, or any other solution as nginx. 
 Bellow an example of config, that runs over HTTPS, and uses 3 workers pararelly.
 
 
