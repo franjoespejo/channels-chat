@@ -95,6 +95,7 @@ It is a panel where you can see the information about the users presence.
 
 
 
+
 ## Alternative Configuration
 
 
