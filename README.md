@@ -77,25 +77,38 @@ CREATE TABLE IF NOT EXISTS `SCPresence_users` (
 ENGINE = INNODB;
 ```
 
+Now, just get the code
 
 ```bash
 git clone git@github.com:franjoespejo/channels-chat.git
 ```
-It's all. Now lauch it with:
+Finally install all the dependences
 
 ```bash
 cd channels-chat
+npm install
+``` 
+
+It's all
+
+## Use
+
+Once in the folder: 
+
+```bash
 node server
 ```
 
-Access at URL http://localhost:8000/
-
+### Access at URL http://localhost:8000/
+You will see a nice web.
 In the window of each channel at the right-top corner you will be able to sub/unsub, the chat is very straight-forward
-Access at URL http://localhost:8000/admin.html, It is a panel where you can see the information about the user presence.
+
+### Access at URL http://localhost:8000/admin.html 
+It is a panel where you can see the information about the users presence.
 
 
 
-### Alternative Configuration
+## Alternative Configuration
 
 
 Since the project it is using socketcluster.io, it has all the benefit associated with this framework.
